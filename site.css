@@ -3,7 +3,4 @@ body {
 }
 
 
-.player-card {
-    border: "1px solid black"
-    align-content;
-}
+.player-card {border:1px solid black; background-color: white};
