@@ -11,7 +11,7 @@ function Player(name, position, number) {
     this.id = pId;
     this.name = name;
     this.position = position;
-    this.number = number;
+    this.jerseyNumber = number;
     roster.push(this);
     pId++;
 }
@@ -27,7 +27,7 @@ var peyton = {
 var cam = {
     name: 'Cam Newton',
     id: 15,
-    position: 'QB',
+    position: 'FB',
     jerseyNumber: 1,
     team: 'Carolina Panthers'
 }
@@ -88,7 +88,7 @@ function draw() {
     var template = '';
     var rosterElem = $('.player-roster');
     for (var i = 0; i < roster.length; i++) {
-        template += '<div class="player-card" id=' + roster[i].id + '><button onclick="removePlayer" class="btn btn-danger">Remove</button><img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/ " class="image-responsive "alt= "Picture "> </img><div class="caption " ><h3>' + roster[i].name + '</h3><h4>' + roster[i].position + '</h4><h4>' + roster[i].number + '</h4></div></div>';
+        template += '<div class="player-card" id=' + roster[i].id + '><button onclick="removePlayer" class="btn btn-danger">Remove</button><img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/ " class="image-responsive "alt= "Picture "> </img><div class="caption " ><h3>' + roster[i].name + '</h3><h4>' + roster[i].position + '</h4><h4>' + roster[i].jerseyNumber + '</h4></div></div>';
     }
 
     rosterElem.empty()
