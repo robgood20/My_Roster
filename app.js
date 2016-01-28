@@ -65,7 +65,6 @@ function getIndex(id) {
 //remove//
 function removePlayer(id) {
     var playerIndex = getIndex(id);
-
     if (playerIndex === -1) {
         return;
     }
@@ -73,7 +72,7 @@ function removePlayer(id) {
     draw()
 }
 
-function addPlayer(e){
+function addPlayer(e) {
     e.preventDefault();
     var pName = $('#player-name').val();
     var pPosition = $('#player-position').val();
@@ -82,14 +81,28 @@ function addPlayer(e){
     draw()
 }
 
-function draw(){
-   var template = '';
-   var rosterElem = $('.player-roster')
-    
-    for(var i = 0; i < roster.length; i++){
-        template += '<div class="player-card"><h1>' + roster[i].name + '</h1>';
+function draw() {
+    var template = '';
+    var rosterElem = $('.player-roster');
+    for (var i = 0; i < roster.length; i++) {
+        template += `<div class="player-card">
+                <style>
+                border: 1px solid black;
+                background: white;
+                </style>
+                        <button onclick=" " class="btn btn-danger ">Remove</button>----insert removeplayer fn------
+                        <div class="display:inline-block">
+                        <img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/ " class="image-responsive " alt="Picture "></img>
+                        <div class="caption ">
+                            <h5>Player Name</h5>
+                            <h6>Position</h6>
+                            <h6>Player Number</h6>
+                        </div>
+                </div>
+            </div>`;
+        
     }
-    
+
     rosterElem.empty()
     rosterElem.append(template);
 }

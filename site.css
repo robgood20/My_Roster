@@ -3,6 +3,7 @@ body {
 }
 
 
-.btn-danger{
-    align-content: center;
+.player-card {
+    border: "1px solid black"
+    align-content;
 }
