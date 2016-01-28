@@ -1,0 +1,17 @@
+$rremoveButton.lcick(function(){
+$card.remove();
+console.log(playerObj);
+}
+
+
+function createPlayerCard (){
+    var card;
+    var img;
+    var name;
+    var pos;
+    var num;
+    var remove;
+    card = $('<div class="player-card>');
+    img = $('<img src="url.here">');
+    name = $('<h1>' + );
+}

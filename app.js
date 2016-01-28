@@ -88,7 +88,7 @@ function draw() {
     var template = '';
     var rosterElem = $('.player-roster');
     for (var i = 0; i < roster.length; i++) {
-        template += '<div class="player-card" id=' + roster[i].id + '><button onclick="removePlayer" class="btn btn-danger ">Remove</button>< img src= "http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/ " class="image-responsive " alt= "Picture " > </img>< div class="caption " ><h5>Player Name< /h5>< h6 > Position < /h6>< h6 > Player Number< /h6>< /div>< /div>< /div>';
+        template += '<div class="player-card" id=' + roster[i].id + '><button onclick="removePlayer" class="btn btn-danger">Remove</button><img src="http://s.nflcdn.com/static/content/public/image/fantasy/transparent/200x200/ " class="image-responsive "alt= "Picture "> </img><div class="caption " ><h5>' + roster[i].name + '</h5><h6>' + roster[i].position + '</h6><h6>' + roster[i].number + '</h6></div></div>';
     }
 
     rosterElem.empty()
@@ -96,4 +96,5 @@ function draw() {
 }
 $('.player-roster').on('click', '.btn-danger', removePlayer);
 draw();
+
 
